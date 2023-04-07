@@ -1,0 +1,22 @@
+/* 表单元素 */
+.el-select{
+  width: 100%;
+}
+.el-date-editor.el-date-editor--date.el-input{
+  width: 100%;
+  .el-input__wrapper{
+    width: 100%;
+  }
+}
+.el-textarea{
+  width: 100%;
+}
+.el-date-editor--daterange.el-input__inner{
+  width: 100%;
+}
+.el-date-editor--monthrange.el-input, .el-date-editor--monthrange.el-input__inner{
+  width: 100%;
+}
+.el-cascader{
+  width: 100%;
+}
