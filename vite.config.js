@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import * as path from 'path';
+import topLevelAwait from 'vite-plugin-top-level-await'
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    topLevelAwait({
+      promiseExportName: '__tla',
+      promiseImportName: i => `__tla_${i}`
+    })
+  ],
   resolve: {
     // 设置别名
     alias: {
