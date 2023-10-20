@@ -1,13 +1,12 @@
 import { reactive, getCurrentInstance } from 'vue';
-import { ITableParams } from '@/modules/table';
 import { messageBox } from '@/utils/message';
 
-export function useTable<T>(
-  options: ITableParams,
-  isPaged = true
+export function useTable(
+  options: any,
+  isPaged: boolean = true
 ): {
-  tableState: T | any;
-  getTableDatas: () => Promise<void>;
+  tableState: any;
+  getTableDatas: () => Promise<any>;
   onCurrentChange: (val: number) => void;
   onSizeChange: (val: number) => void;
   onResetClick: () => void;
@@ -18,7 +17,7 @@ export function useTable<T>(
 
   const tableState = reactive({
     loading: false,
-    tableDatas: [],
+    tableDatas: [] as any[],
     pagination: {
       page: 1,
       limit: 20,
@@ -45,7 +44,7 @@ export function useTable<T>(
     tableState.loading = false;
     tableState.pagination.total = res.totalNum || res.total;
     tableState.tableDatas = res.detail || res.list;
-    return Promise.resolve(tableState.tableDatas);
+    return await Promise.resolve(tableState.tableDatas);
   };
   const onCurrentChange = (val: number) => {
     tableState.pagination.page = val;

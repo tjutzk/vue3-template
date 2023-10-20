@@ -1,37 +1,36 @@
-
 import type { RouteRecordRaw } from 'vue-router';
-import Layout from '@/layout/index.vue'
-const routes:RouteRecordRaw[] = [
+import Layout from '@/layout/index.vue';
+const routes: RouteRecordRaw[] = [
   {
     path: '/userManagement',
     name: 'userManagement',
-    component:Layout,
+    component: Layout,
     meta: {
-      title: '用户管理',
+      title: '用户管理'
     },
     children: [
       {
         path: 'role',
         name: 'role',
-        component: () => import('@/views/userManagement/role/index.vue'),
+        component: async () => await import('@/views/userManagement/role/index.vue'),
         meta: {
-          title: '角色管理',
+          title: '角色管理'
         }
       },
       {
         path: 'account',
         name: 'account',
-        component: () => import('@/views/userManagement/account/index.vue'),
+        component: async () => await import('@/views/userManagement/account/index.vue'),
         meta: {
-          title: '账号管理',
+          title: '账号管理'
         }
       },
       {
         path: 'company',
         name: 'company',
-        component: () => import('@/views/userManagement/company/index.vue'),
+        component: async () => await import('@/views/userManagement/company/index.vue'),
         meta: {
-          title: '企业管理',
+          title: '企业管理'
         }
       }
     ]
