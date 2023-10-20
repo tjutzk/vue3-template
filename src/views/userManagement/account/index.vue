@@ -1,5 +1,5 @@
 <template>
-  <div>账号管理</div>
+  <div>账号管理页面</div>
 </template>
 
 <script setup lang="ts"></script>
