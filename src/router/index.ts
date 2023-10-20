@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteRecordRaw } from 'vue-router';
 
+// 递归路由
 const menuRoutes: RouteRecordRaw[] = [];
 const modules = import.meta.glob('./modules/*.ts', { eager: true });
 
