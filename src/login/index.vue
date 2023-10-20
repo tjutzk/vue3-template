@@ -44,6 +44,7 @@ const rules = reactive<FormRules>({
   password: [{ required: true, message: '密码不能为空', trigger: 'blur' }]
 });
 
+// 确认登陆
 const onLoginClick = () => {
   loginForm.value!.validate((valid: boolean) => {
     if (valid) {
