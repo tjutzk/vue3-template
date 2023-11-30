@@ -2,7 +2,6 @@
   "name": "vue_template",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -10,7 +9,7 @@
     "prepare": "husky install",
     "commit": "git-cz",
     "eslint": "eslint --ext .js,.ts,.tsx,.vue --fix src",
-    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
+    "commitlint": "commitlint --config commitlint.config.ts -e -V"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [

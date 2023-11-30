@@ -10,7 +10,8 @@
 //   revert：回滚某个更早之前的提交
 //   chore：不属于以上类型的其他类型
 
-const Configuration = {
+import type { UserConfig } from '@commitlint/types';
+const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'body-leading-blank': [2, 'always'],
